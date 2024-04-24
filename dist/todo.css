@@ -1,0 +1,223 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/global.css ***!
+  \**********************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap);
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/global.css (1) ***!
+  \**************************************************************************/
+:root {
+    --bg-color: rgb(29, 29, 29);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Tilt Neon','Courier New', Courier, monospace;
+
+    min-height: 100vh;
+
+    background-color: var(--bg-color);
+
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #2e2e2e;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover {
+	box-shadow: 0 1px 1px 0  #000000, 0 2px 5px 0  #000000;
+}
+.btn:active {
+	background-color: #212121 !important;
+}
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  \*********************************************************************/
+main {
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+    
+    margin: 10px 0;
+    padding: 10px 5px;
+
+    border-radius: 4px;
+    border-bottom: 1px solid #fff;
+
+    transition: .2s;
+}
+
+.todo:hover {
+    transition: .2s;
+
+    background-color: rgb(48, 48, 48);
+}
+
+aside, .todos {
+    padding: 10px;
+
+    width: 30%;
+    height: 100%;
+
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.todos {width: 70%;}
+
+.title {
+    margin: 50px 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: .3s;
+
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+li img, .todo img {
+    width: 24px;
+    height: 24px;
+}
+
+li span {
+    width: 100%;
+}
+
+.active {
+    transition: .3s;
+
+    color: #a52729;
+}
+
+.modal {
+	min-width: 300px;
+
+    border-radius: 10px;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	padding: 20px;
+
+	background-color: rgb(24, 24, 24);
+
+    z-index: 2;
+
+	display: none;
+}
+
+.modal-bg.active {
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+    background-color: #000000c4;
+
+    z-index: 1;
+}
+
+.modal.active, .modal-bg.active {
+	display: block;
+}
+
+.modal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal__content input {
+    margin-bottom: 10px;
+}
+
+.modal h4 {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+	color: white;
+	border: 2px solid #8707ff;
+	border-radius: 5px;
+	padding: 5px 15px;
+	background: transparent;
+  }
+  
+input:active {
+	box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+select[name='priority'] {
+    color: #fff;
+
+    border: 2px solid #8707ff;
+    border-radius: 5px;
+
+    background: none;
+
+    outline: none;
+        
+    font-size: 13px;
+
+    padding: 5px 15px;
+    margin-bottom: 10px;
+}
+
+select[name='priority'] option {
+    color: #000;
+}
